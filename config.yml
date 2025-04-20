@@ -1,0 +1,28 @@
+listeners:
+  - query_port: 25577
+    motd: '&1Just another BungeeCord - Forced Host'
+    tab_list: GLOBAL_PING
+    query_enabled: false
+    proxy_protocol: false
+    forced_hosts:
+      pvp.md-5.net: pvp
+    bind_local_address: true
+    host: 0.0.0.0:25577
+    max_players: 100
+    tab_size: 60
+    force_default_server: true
+
+servers:
+  lobby:
+    address: mc1:25565
+    motd: "Welcome to Lobby"
+    restricted: false
+  server2:
+    address: mc2:25565
+    motd: "Welcome to Server 2"
+    restricted: false
+
+online_mode: false
+log_commands: false
+connection_throttle: 4000
+connection_throttle_limit: 3

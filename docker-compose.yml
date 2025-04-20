@@ -1,0 +1,44 @@
+version: "3"
+services:
+  mc1:
+    image: itzg/minecraft-server
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+      MOTD: "Minecraft Server 1"
+    volumes:
+      - mc1-data:/data
+    networks:
+      - mc-network
+
+  mc2:
+    image: itzg/minecraft-server
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+      MOTD: "Minecraft Server 2"
+    volumes:
+      - mc2-data:/data
+    networks:
+      - mc-network
+
+  proxy:
+    image: itzg/mc-proxy
+    environment:
+      BUNGEE_JAR_REVISION: "1"  # 如果使用 BungeeCord，您可以設置此變數
+      CFG_MOTD: "Welcome to our Minecraft Network!"
+      REPLACE_ENV_VARIABLES: "true"
+    ports:
+      - "25565:25577"  # 這是代理伺服器的公開端口
+    volumes:
+      - ./config.yml:/config/config.yml  # 這裡的配置文件包含伺服器列表等設定
+    networks:
+      - mc-network
+
+volumes:
+  mc1-data:
+  mc2-data:
+
+networks:
+  mc-network:
+    driver: bridge
