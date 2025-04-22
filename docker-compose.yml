@@ -25,13 +25,13 @@ services:
   proxy:
     image: itzg/mc-proxy
     environment:
-      BUNGEE_JAR_REVISION: "1"  # 如果使用 BungeeCord，您可以設置此變數
+      BUNGEE_JAR_REVISION: "1"  
       CFG_MOTD: "Welcome to our Minecraft Network!"
       REPLACE_ENV_VARIABLES: "true"
     ports:
-      - "25565:25577"  # 這是代理伺服器的公開端口
+      - "25565:25577" 
     volumes:
-      - ./config.yml:/config/config.yml  # 這裡的配置文件包含伺服器列表等設定
+      - ./config.yml:/config/config.yml
     networks:
       - mc-network
 

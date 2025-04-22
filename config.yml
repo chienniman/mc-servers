@@ -11,11 +11,13 @@ listeners:
     max_players: 100
     tab_size: 60
     force_default_server: true
+    priorities:
+      - server1
 
 servers:
-  lobby:
+  server1:
     address: mc1:25565
-    motd: "Welcome to Lobby"
+    motd: "Welcome to Server 1"
     restricted: false
   server2:
     address: mc2:25565
