@@ -28,3 +28,29 @@ online_mode: false
 log_commands: false
 connection_throttle: 4000
 connection_throttle_limit: 3
+
+permissions:
+  default:
+    - bungeechat.command.global
+    - bungeechat.command.local
+    - bungeechat.chat.color.*
+    - bungeechat.chat.format.*
+    - bungeechat.chat.bypass.antiadvertisement
+    - bungeechat.chat.bypass.anticapslock
+    - bungeechat.chat.bypass.antiduplicate
+    - bungeechat.chat.bypass.antispam
+    - bungeechat.chat.bypass.antiswear
+    - bungeechat.chat.bypass.toggle
+    - bungeechat.chat.bypass.chatlock
+    - bungeechat.chat.bypass.ignore
+    - bungeecord.command.server
+
+  groups:
+    default:
+      - default
+    admin:
+      - bungeechat.admin.reload
+      - bungeechat.admin.setprefix
+      - bungeechat.admin.setsuffix
+      - bungeechat.admin.checkversion
+      - bungeechat.admin.modules
