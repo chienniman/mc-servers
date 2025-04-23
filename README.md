@@ -1,3 +1,8 @@
+## join my servers
+
+### Cloud server
+boris_playground.aternos.me:27919
+
 ## single server
 docker run -d \
   -e EULA=TRUE \                     
@@ -8,8 +13,8 @@ docker run -d \
   itzg/minecraft-server               
 
 ## multi servers
-cd /multi
-docker-compose up -d
+- cd /multi
+- docker-compose up -d
 
 ## mc commands
 docker exec -i <ID> rcon-cli
