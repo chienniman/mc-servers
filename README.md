@@ -3,6 +3,9 @@
 ### Cloud server
 boris-mc0.aternos.me
 
+### Local server
+127.0.0.1:25565
+
 ## Start single server
 docker run -d \
   -e EULA=TRUE \                     
@@ -18,6 +21,3 @@ docker run -d \
 
 ## Use mc commands
 docker exec -i <ID> rcon-cli
-
-## host
-127.0.0.1:25565
