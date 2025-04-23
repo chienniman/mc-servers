@@ -3,7 +3,7 @@
 ### Cloud server
 boris-mc0.aternos.me
 
-## single server
+## Start single server
 docker run -d \
   -e EULA=TRUE \                     
   -e ONLINE_MODE=FALSE \              
@@ -12,11 +12,11 @@ docker run -d \
   --name mc0 \               
   itzg/minecraft-server               
 
-## multi servers
+## Start multi servers
 - cd /multi
 - docker-compose up -d
 
-## mc commands
+## Use mc commands
 docker exec -i <ID> rcon-cli
 
 ## host
