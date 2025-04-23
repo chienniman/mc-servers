@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    container_name: mc0
+    environment:
+      - EULA=TRUE
+      - ONLINE_MODE=FALSE
+      - VERSION=1.20
+    ports:
+      - "25565:25565"
+    volumes:
+      - ./server-icon.png:/data/server-icon.png
+    restart: unless-stopped
