@@ -1,7 +1,7 @@
 ## join my servers
 
 ### Cloud server
-boris_playground.aternos.me:27919
+boris-mc0.aternos.me
 
 ## single server
 docker run -d \
